@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/bg_header"
+        android:background="#2196F3"
+        >
+        <!--        android:src="@drawable/bg_header" -->
+
+    </ImageView>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logoinventorymanagement"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        >
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inventory_app"
+        android:textSize="24sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        >
+
+    </TextView>
+
+
+</FrameLayout>
+
+

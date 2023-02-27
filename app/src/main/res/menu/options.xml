@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single" >
+        <!--android:icon="@android:drawable/ic_dialog_email"-->
+
+        <item
+            android:id="@+id/menuprincipal"
+            android:title="menuprincipal"
+            >
+        </item>
+
+        <item
+            android:id="@+id/opcion1"
+            android:title="opcion1"
+            >
+        </item>
+
+        <item
+            android:id="@+id/opcion2"
+            android:title="opcion2"
+            >
+        </item>
+
+        <item
+            android:id="@+id/opcion3"
+            android:title="opcion3"
+            >
+        </item>
+
+        <item
+            android:id="@+id/opcion4"
+            android:title="opcion4"
+            >
+        </item>
+
+    </group>
+
+    <item
+
+        android:title="Otras opciones...">
+            <menu>
+                <item
+                    android:id="@+id/opcion5"
+                    android:title="opcion5"
+                    >
+                </item>
+
+                <item
+                    android:id="@+id/opcion6"
+                    android:title="opcion6"
+                    >
+                </item>
+            </menu>
+    </item>
+
+</menu>
