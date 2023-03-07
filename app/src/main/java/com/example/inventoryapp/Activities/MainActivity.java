@@ -15,6 +15,11 @@ import com.example.inventoryapp.Fragments.ProveedoresFragment;
 import com.example.inventoryapp.Fragments.CategoriasProductosFragment;
 import com.example.inventoryapp.Fragments.ProductosFragment;
 import com.example.inventoryapp.Fragments.ClientesFragment;
+import com.example.inventoryapp.Fragments.EntradaProductoFragment;
+import com.example.inventoryapp.Fragments.SalidaProductoFragment;
+import com.example.inventoryapp.Fragments.acercadeFragment;
+import com.example.inventoryapp.Fragments.contactanosFragment;
+
 import com.example.inventoryapp.R;
 import com.google.android.material.navigation.NavigationView;
 
@@ -71,6 +76,22 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.clientes:
                         fragment= new ClientesFragment();
                         fragmentsTransaccion = true;
+                        break;
+                    case R.id.entradaproductos:
+                        fragment= new EntradaProductosFragment();
+                        fragmentsTransaccion = true;
+                        break;
+                    case R.id.salidaproductos:
+                        fragments = new salidaProductosFragments();
+                        fragmentsTransaccion = true;
+                        break;
+                    case R.id.contactanos:
+                        fragments = new contactanosFragment();
+                        fragmentsTransaccion = true;
+                        break;
+                    case R.id.acercade:
+                        fragments = new acercadeFragment();
+                        fragmentsTransaccion = True;
                         break;
                 }
 
