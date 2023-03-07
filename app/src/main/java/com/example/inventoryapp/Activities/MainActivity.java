@@ -11,10 +11,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.inventoryapp.Fragments.menuprincipalFragment;
-import com.example.inventoryapp.Fragments.opcion1Fragment;
-import com.example.inventoryapp.Fragments.opcion2Fragment;
-import com.example.inventoryapp.Fragments.opcion3Fragment;
-import com.example.inventoryapp.Fragments.opcion4Fragment;
+import com.example.inventoryapp.Fragments.ProveedoresFragment;
+import com.example.inventoryapp.Fragments.CategoriasProductosFragment;
+import com.example.inventoryapp.Fragments.ProductosFragment;
+import com.example.inventoryapp.Fragments.ClientesFragment;
 import com.example.inventoryapp.R;
 import com.google.android.material.navigation.NavigationView;
 
@@ -56,20 +56,20 @@ public class MainActivity extends AppCompatActivity {
                         fragmentsTransaccion = true;
                         break;
 
-                    case R.id.opcion1:
-                        fragment= new opcion1Fragment();
+                    case R.id.proveedores:
+                        fragment= new ProveedoresFragment();
                         fragmentsTransaccion = true;
                         break;
-                    case R.id.opcion2:
-                        fragment= new opcion2Fragment();
+                    case R.id.categoriasproductos:
+                        fragment= new CategoriasProductosFragment();
                         fragmentsTransaccion = true;
                         break;
-                    case R.id.opcion3:
-                        fragment= new opcion3Fragment();
+                    case R.id.productos:
+                        fragment= new ProductosFragment();
                         fragmentsTransaccion = true;
                         break;
-                    case R.id.opcion4:
-                        fragment= new opcion4Fragment();
+                    case R.id.clientes:
+                        fragment= new ClientesFragment();
                         fragmentsTransaccion = true;
                         break;
                 }

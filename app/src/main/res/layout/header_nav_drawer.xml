@@ -9,7 +9,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_height="90dp"
         android:scaleType="centerCrop"
         android:contentDescription="@string/bg_header"
         android:background="#2196F3"
@@ -37,8 +37,8 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginbottom="30dp"
+        android:layout_marginStart="110dp"
         >
 
     </TextView>

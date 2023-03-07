@@ -12,10 +12,10 @@ import com.example.inventoryapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link opcion3Fragment#newInstance} factory method to
+ * Use the {@link ProductosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class opcion3Fragment extends Fragment {
+public class ProductosFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class opcion3Fragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public opcion3Fragment() {
+    public ProductosFragment() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class opcion3Fragment extends Fragment {
      * @return A new instance of fragment opcion3Fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static opcion3Fragment newInstance(String param1, String param2) {
-        opcion3Fragment fragment = new opcion3Fragment();
+    public static ProductosFragment newInstance(String param1, String param2) {
+        ProductosFragment fragment = new ProductosFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class opcion3Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_opcion3, container, false);
+        return inflater.inflate(R.layout.fragment_productos, container, false);
     }
 }

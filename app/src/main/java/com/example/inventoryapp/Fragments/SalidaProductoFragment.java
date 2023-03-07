@@ -12,10 +12,10 @@ import com.example.inventoryapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link opcion2Fragment#newInstance} factory method to
+ * Use the {@link SalidaProductoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class opcion2Fragment extends Fragment {
+public class SalidaProductoFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class opcion2Fragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public opcion2Fragment() {
+    public SalidaProductoFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class opcion2Fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment opcion2Fragment.
+     * @return A new instance of fragment SalidaProductoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static opcion2Fragment newInstance(String param1, String param2) {
-        opcion2Fragment fragment = new opcion2Fragment();
+    public static SalidaProductoFragment newInstance(String param1, String param2) {
+        SalidaProductoFragment fragment = new SalidaProductoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class opcion2Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_opcion2, container, false);
+        return inflater.inflate(R.layout.fragment_salida_producto, container, false);
     }
 }
