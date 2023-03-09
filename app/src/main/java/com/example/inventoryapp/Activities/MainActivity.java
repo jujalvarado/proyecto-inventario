@@ -78,20 +78,20 @@ public class MainActivity extends AppCompatActivity {
                         fragmentsTransaccion = true;
                         break;
                     case R.id.entradaproductos:
-                        fragment= new EntradaProductosFragment();
+                        fragment= new EntradaProductoFragment();
                         fragmentsTransaccion = true;
                         break;
                     case R.id.salidaproductos:
-                        fragments = new salidaProductosFragments();
+                        fragment = new SalidaProductoFragment();
                         fragmentsTransaccion = true;
                         break;
                     case R.id.contactanos:
-                        fragments = new contactanosFragment();
+                        fragment = new contactanosFragment();
                         fragmentsTransaccion = true;
                         break;
                     case R.id.acercade:
-                        fragments = new acercadeFragment();
-                        fragmentsTransaccion = True;
+                        fragment = new acercadeFragment();
+                        fragmentsTransaccion = true;
                         break;
                 }
 
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 drawerLayout.openDrawer(GravityCompat.START);
                 return true;
-        };
+        }
 
         return super.onOptionsItemSelected(item);
     }
