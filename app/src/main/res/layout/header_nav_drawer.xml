@@ -25,7 +25,7 @@
         android:src="@drawable/logoinventorymanagement"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        >
+        android:contentDescription="@string/logo">
     </ImageView>
 
     <TextView
@@ -37,11 +37,8 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_gravity="bottom"
-        android:layout_marginbottom="30dp"
-        android:layout_marginStart="110dp"
-        >
-
-    </TextView>
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="110dp" />
 
 
 </FrameLayout>

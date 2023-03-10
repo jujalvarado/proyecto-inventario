@@ -4,5 +4,12 @@
     <string name="inventory_app">Inventory app</string>
     <string name="registrarse">Registrarse</string>
     <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="logo">logo</string>
+    <string name="email">Email</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="bienvenido_a_inventory_app">Bienvenido a Inventory app</string>
 
 </resources>

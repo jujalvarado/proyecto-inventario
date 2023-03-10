@@ -13,14 +13,23 @@
         android:theme="@style/Theme.InventoryApp"
         tools:targetApi="31">
         <activity
-            android:name=".RegistraseActivity"
+            android:name=".Activities.RegistrarseActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
-            android:name=".IniciarSesionActivity"
+            android:name=".Activities.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".Activities.IniciarSesionActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
