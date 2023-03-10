@@ -2,11 +2,24 @@ package com.example.inventoryapp.Fragments;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.inventoryapp.Fragments.menuprincipalFragment;
+import com.example.inventoryapp.Fragments.ProveedoresFragment;
+import com.example.inventoryapp.Fragments.CategoriasProductosFragment;
+import com.example.inventoryapp.Fragments.ProductosFragment;
+import com.example.inventoryapp.Fragments.ClientesFragment;
+import com.example.inventoryapp.Fragments.EntradaProductoFragment;
+import com.example.inventoryapp.Fragments.SalidaProductoFragment;
+import com.example.inventoryapp.Fragments.acercadeFragment;
+import com.example.inventoryapp.Fragments.contactanosFragment;
+
 
 import com.example.inventoryapp.R;
 
@@ -16,6 +29,9 @@ import com.example.inventoryapp.R;
  * create an instance of this fragment.
  */
 public class menuprincipalFragment extends Fragment {
+
+    private CardView cardViewProveedores,cardViewCategorias,cardViewProductos,
+                     cardViewClientes, cardViewProductoEntrante, cardViewProductoSaliente;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,7 +76,93 @@ public class menuprincipalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menuprincipal, container, false);
+
+
+        View view = inflater.inflate(R.layout.fragment_menuprincipal, container, false);
+
+        cardViewProveedores = view.findViewById(R.id.cardViewProveedores);
+        cardViewCategorias = view.findViewById(R.id.cardViewCategorias);
+        cardViewProductos = view.findViewById(R.id.cardViewProductos);
+        cardViewClientes = view.findViewById(R.id.cardViewClientes);
+        cardViewProductoEntrante = view.findViewById(R.id.cardViewProductoEntrante);
+        cardViewProductoSaliente = view.findViewById(R.id.cardViewProductoSaliente);
+
+
+        cardViewProveedores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new ProveedoresFragment();
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame,fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        cardViewCategorias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new CategoriasProductosFragment();
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame,fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        cardViewProductos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new ProductosFragment();
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame,fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        cardViewClientes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new ClientesFragment();
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame,fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        cardViewProductoEntrante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new EntradaProductoFragment();
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame,fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        cardViewProductoSaliente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new EntradaProductoFragment();
+                FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame,fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
+        return view;
+
+
     }
 }

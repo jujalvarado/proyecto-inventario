@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape>
-            <gradient
-                android:startColor="#f6d365"
-                android:endColor="#F2AF16"
-                android:type="linear">
-            </gradient>
-            <corners
-                android:radius="10dp"/>
-        </shape>
-    </item>
 
-</selector>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#f6d365"
+        android:endColor="#F2AF16"
+        android:type="linear">
+    </gradient>
+    <corners
+        android:radius="10dp"/>
+</shape>

@@ -3,12 +3,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.CategoriasProductosFragment">
+    tools:context=".Fragments.CategoriasProductosFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/aqua_200">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment 2" />
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/PAgregarRegistro"
+            android:layout_width="358dp"
+            android:layout_height="78dp"
+            android:layout_marginTop="64dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:fontFamily="@font/comfortaabold"
+            android:padding="10dp"
+            android:text="Agregar Categorías "
+            android:textAllCaps="false"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textEnd"
+            app:iconSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="294dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/comfortaaregular"
+            android:text="No hay registros..."
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/PAgregarRegistro"
+            app:layout_constraintStart_toStartOf="@+id/PAgregarRegistro"
+            app:layout_constraintTop_toBottomOf="@+id/PAgregarRegistro">
+
+        </TextView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

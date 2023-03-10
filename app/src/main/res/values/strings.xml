@@ -11,5 +11,6 @@
     <string name="nombres">Nombres</string>
     <string name="apellidos">Apellidos</string>
     <string name="bienvenido_a_inventory_app">Bienvenido a Inventory app</string>
+    <string name="title_activity_agregar_proveedor">Agregar_ProveedorActivity</string>
 
 </resources>

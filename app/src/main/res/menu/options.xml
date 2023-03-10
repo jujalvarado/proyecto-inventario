@@ -58,14 +58,14 @@
             android:title="Procesos Principales ">
                 <menu>
                     <item
-                        android:icon="@drawable/ic_home"
+                        android:icon="@drawable/ic_add"
                         android:id="@+id/entradaproductos"
                         android:title="Ingresar Productos"
                         >
                     </item>
 
                     <item
-                        android:icon="@drawable/ic_home"
+                        android:icon="@drawable/ic_remove"
                         android:id="@+id/salidaproductos"
                         android:title="Retirar Productos"
                         >

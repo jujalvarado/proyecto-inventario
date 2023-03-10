@@ -12,7 +12,7 @@
         android:layout_height="90dp"
         android:scaleType="centerCrop"
         android:contentDescription="@string/bg_header"
-        android:background="#2196F3"
+        android:background="#40A6F8"
         >
         <!--        android:src="@drawable/bg_header" -->
 
@@ -36,6 +36,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         android:textColor="@color/black"
+        android:fontFamily="@font/comfortaaregular"
         android:layout_gravity="bottom"
         android:layout_marginBottom="30dp"
         android:layout_marginStart="110dp" />
