@@ -5,23 +5,21 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.menuprincipalFragment"
-    android:background="@drawable/gradient_background_registrarse"
+    android:background="@color/aqua_200"
     android:id="@+id/fragmentMenuPrincipal"
     >
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/fondoMenuPrincipal"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@drawable/background_menu"
             android:contentDescription="@string/bg_header"
-            android:scaleType="centerCrop">
-        </ImageView>
+            android:scaleType="centerCrop"></ImageView>
 
         <TextView
             android:id="@+id/title_view"
@@ -33,239 +31,240 @@
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
+
         <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/title_view"
-            android:rowCount="3"
+            android:layout_width="329dp"
+            android:layout_height="608dp"
+            android:layout_below="@+id/title_view"
+            android:layout_alignStart="@+id/title_view"
+            android:layout_alignEnd="@+id/title_view"
+            android:layout_marginStart="-75dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="-76dp"
+            android:layout_marginBottom="20dp"
             android:columnCount="2"
-            android:layout_margin="20dp">
+            android:rowCount="3">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewProveedores"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
-                android:layout_column="0"
-                android:layout_gravity="fill"
                 android:layout_rowWeight="1"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
+                android:layout_gravity="fill"
                 android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/morning_glory"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:background="@color/morning_glory"
-                >
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical"
+
                     >
+
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/ic_proveedores1"
-                        />
+                        android:src="@drawable/ic_proveedores1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Proveedores"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
                         android:fontFamily="@font/comfortaaregular"
-                        />
+                        android:text="Proveedores"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewCategorias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
-                android:layout_column="1"
-                android:layout_gravity="fill"
                 android:layout_rowWeight="1"
+                android:layout_column="1"
                 android:layout_columnWeight="1"
+                android:layout_gravity="fill"
                 android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/morning_glory"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:background="@color/morning_glory"
-                >
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    >
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/ic_categoriaproductos1"
-                        />
+                        android:src="@drawable/ic_categoriaproductos1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Categorías"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
                         android:fontFamily="@font/comfortaaregular"
-                        />
+                        android:text="Categorías"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewProductos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
-                android:layout_column="0"
-                android:layout_gravity="fill"
                 android:layout_rowWeight="1"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
+                android:layout_gravity="fill"
                 android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/morning_glory"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:background="@color/morning_glory"
-                >
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    >
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/ic_productos1"
-                        />
+                        android:src="@drawable/ic_productos1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Productos"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
                         android:fontFamily="@font/comfortaaregular"
-                        />
+                        android:text="Productos"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewClientes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
-                android:layout_column="1"
-                android:layout_gravity="fill"
                 android:layout_rowWeight="1"
+                android:layout_column="1"
                 android:layout_columnWeight="1"
+                android:layout_gravity="fill"
                 android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/morning_glory"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:background="@color/morning_glory"
-                >
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    >
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/ic_cliente1"
-                        />
+                        android:src="@drawable/ic_cliente1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Clientes"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
                         android:fontFamily="@font/comfortaaregular"
-                        />
+                        android:text="Clientes"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewProductoEntrante"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="2"
-                android:layout_column="0"
-                android:layout_gravity="fill"
                 android:layout_rowWeight="1"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
+                android:layout_gravity="fill"
                 android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/morning_glory"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:background="@color/morning_glory"
-                >
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    >
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/ic_add1"
-                        />
+                        android:src="@drawable/ic_add1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Producto Entrante"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
                         android:fontFamily="@font/comfortaaregular"
-                        />
+                        android:text="Producto Entrante"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewProductoSaliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="2"
-                android:layout_column="1"
-                android:layout_gravity="fill"
                 android:layout_rowWeight="1"
+                android:layout_column="1"
                 android:layout_columnWeight="1"
+                android:layout_gravity="fill"
                 android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/morning_glory"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="8dp"
-                android:background="@color/morning_glory"
-                >
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    >
+                    android:gravity="center"
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/ic_remove1"
-                        />
+                        android:src="@drawable/ic_remove1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Producto Saliente"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
                         android:fontFamily="@font/comfortaaregular"
-                        />
+                        android:text="Producto Saliente"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

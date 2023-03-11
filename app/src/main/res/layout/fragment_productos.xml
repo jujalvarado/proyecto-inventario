@@ -13,12 +13,12 @@
 
         <Button
             android:id="@+id/PAgregarRegistro"
-            android:layout_width="358dp"
-            android:layout_height="78dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:backgroundTint="@android:color/holo_green_dark"
             android:fontFamily="@font/comfortaabold"
-            android:padding="10dp"
+            android:padding="20dp"
             android:text="Agregar Productos "
             android:textAllCaps="false"
             android:textSize="21sp"
@@ -33,11 +33,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="294dp"
-            android:layout_height="57dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
             android:fontFamily="@font/comfortaaregular"
             android:text="No hay registros..."
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="@+id/PAgregarRegistro"

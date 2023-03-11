@@ -12,5 +12,8 @@
     <string name="apellidos">Apellidos</string>
     <string name="bienvenido_a_inventory_app">Bienvenido a Inventory app</string>
     <string name="title_activity_agregar_proveedor">Agregar_ProveedorActivity</string>
+    <string name="description">Aplicacion realizada por el grupo #2 del 4A, enfocada en el manejo de inventario.</string>
+    <string name="integrantes">Pedro Mera Macías \n Jessica Martínez Acosta \n Anabelle Gonzalez Villon \n Angie Camila Alvarado \n Juan Alvarado Piza \n Luis Correa Álava</string>
+    <string name="integrantes1">Integrantes</string>
 
 </resources>

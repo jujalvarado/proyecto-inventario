@@ -12,17 +12,18 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/PAgregarRegistro"
-            android:layout_width="358dp"
-            android:layout_height="78dp"
+            android:id="@+id/CPAgregarRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:backgroundTint="@android:color/holo_green_dark"
             android:fontFamily="@font/comfortaabold"
-            android:padding="10dp"
+            android:padding="15dp"
             android:text="Agregar Categorías "
             android:textAllCaps="false"
             android:textSize="21sp"
             android:textStyle="bold"
+
             app:icon="@drawable/ic_add"
             app:iconGravity="textEnd"
             app:iconSize="30dp"
@@ -32,20 +33,20 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="294dp"
-            android:layout_height="57dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
             android:fontFamily="@font/comfortaaregular"
             android:text="No hay registros..."
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="@+id/PAgregarRegistro"
-            app:layout_constraintStart_toStartOf="@+id/PAgregarRegistro"
-            app:layout_constraintTop_toBottomOf="@+id/PAgregarRegistro">
+            app:layout_constraintEnd_toEndOf="@+id/CPAgregarRegistro"
+            app:layout_constraintStart_toStartOf="@+id/CPAgregarRegistro"
+            app:layout_constraintTop_toBottomOf="@+id/CPAgregarRegistro">
 
         </TextView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </FrameLayout>
