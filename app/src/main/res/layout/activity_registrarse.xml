@@ -1,136 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@drawable/gradient_background_registrarse"
-tools:context=".Activities.RegistrarseActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    <TextView
-        android:id="@+id/rtextView"
-        android:layout_width="wrap_content"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/comfortaabold"
-        android:shadowColor="#12ec34"
-        android:text="@string/registrarse"
-        android:textAlignment="center"
-        android:textColor="#039BE5"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/rimageView"
-        android:layout_width="151dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/logo"
-        app:layout_constraintEnd_toEndOf="@+id/rtextView"
-        app:layout_constraintStart_toStartOf="@+id/rtextView"
-        app:layout_constraintTop_toBottomOf="@+id/rtextView"
-        app:srcCompat="@drawable/registrarse"
-        tools:ignore="ImageContrastCheck" />
-
-    <EditText
-        android:id="@+id/reditTextNombres"
-        android:layout_width="320dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="24dp"
-        android:autofillHints=""
-        android:background="@drawable/custominput"
-        android:drawableStart="@drawable/ic_person"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="@string/nombres"
-        android:inputType="textEmailAddress"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/rimageView"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/rimageView"
-        app:layout_constraintTop_toBottomOf="@+id/rimageView" />
-
-    <EditText
-        android:id="@+id/reditTextApellidos"
-        android:layout_width="320dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="108dp"
-        android:autofillHints=""
-        android:background="@drawable/custominput"
-        android:drawableStart="@drawable/ic_person"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="@string/apellidos"
-        android:inputType="textEmailAddress"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/reditTextNombres"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/reditTextNombres"
-        app:layout_constraintTop_toBottomOf="@+id/rimageView" />
-
-    <EditText
-        android:id="@+id/reditTextContrasena"
-        android:layout_width="320dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:autofillHints=""
-        android:background="@drawable/custominput"
-        android:drawableStart="@drawable/ic_contrasena"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="@string/contrasena"
-        android:inputType="textPassword"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/reditTextEmail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/reditTextEmail"
-        app:layout_constraintTop_toBottomOf="@+id/reditTextEmail" />
-
-    <EditText
-        android:id="@+id/reditTextEmail"
-        android:layout_width="320dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="196dp"
-        android:autofillHints=""
-        android:background="@drawable/custominput"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="20dp"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/reditTextApellidos"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/reditTextApellidos"
-        app:layout_constraintTop_toBottomOf="@+id/rimageView" />
-
-    <Button
-        android:id="@+id/rbuttonRegistrarse"
-        android:layout_width="210dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/gradient_background_button"
-        android:fontFamily="@font/comfortaabold"
-        android:text="@string/registrarse"
-        android:textAllCaps="false"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/reditTextContrasena"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="@+id/reditTextContrasena"
-        app:layout_constraintTop_toBottomOf="@+id/reditTextContrasena" />
+        android:background="@drawable/gradient_background_registrarse"
+        tools:context=".Activities.RegistrarseActivity">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/rtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/comfortaabold"
+            android:shadowColor="#12ec34"
+            android:text="@string/registrarse"
+            android:textAlignment="center"
+            android:textColor="#039BE5"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints,TextContrastCheck" />
+
+        <ImageView
+            android:id="@+id/rimageView"
+            android:layout_width="151dp"
+            android:layout_height="146dp"
+            android:layout_marginTop="52dp"
+            android:contentDescription="@string/logo"
+            app:layout_constraintEnd_toEndOf="@+id/rtextView"
+            app:layout_constraintStart_toStartOf="@+id/rtextView"
+            app:layout_constraintTop_toBottomOf="@+id/rtextView"
+            app:srcCompat="@drawable/registrarse"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/rtextViewu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/comfortaabold"
+            android:shadowColor="#12ec34"
+            android:text="@string/informacion_de_usuario"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/rimageView"
+            app:layout_constraintHorizontal_bias="0.858"
+            app:layout_constraintStart_toStartOf="@+id/rimageView"
+            app:layout_constraintTop_toBottomOf="@+id/rimageView" />
+
+        <EditText
+            android:id="@+id/reditTextNombres"
+            android:layout_width="320dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="100dp"
+            android:autofillHints=""
+            android:background="@drawable/custominput"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="@string/nombres"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/rimageView"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/rimageView"
+            app:layout_constraintTop_toBottomOf="@+id/rimageView"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/reditTextContrasena"
+            android:layout_width="320dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints=""
+            android:background="@drawable/custominput"
+            android:drawableStart="@drawable/ic_contrasena"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="@string/contrasena"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/reditTextEmail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/reditTextEmail"
+            app:layout_constraintTop_toBottomOf="@+id/reditTextEmail"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/reditTextEmail"
+            android:layout_width="320dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints=""
+            android:background="@drawable/custominput"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/reditTextNombres"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/reditTextNombres"
+            app:layout_constraintTop_toBottomOf="@+id/reditTextNombres"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/rtextViewt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:fontFamily="@font/comfortaabold"
+            android:shadowColor="#12ec34"
+            android:text="@string/informacion_de_la_tienda_negocio"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/rtextViewu"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="@+id/rtextViewu"
+            app:layout_constraintTop_toBottomOf="@+id/rtextViewu" />
+
+
+
+        <EditText
+            android:id="@+id/reditTextNombret"
+            android:layout_width="320dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="144dp"
+            android:autofillHints=""
+            android:background="@drawable/custominputtienda"
+            android:drawableStart="@drawable/ic_tienda"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="@string/nombre_de_la_tienda_negocio"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/reditTextContrasena"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/reditTextContrasena"
+            app:layout_constraintTop_toBottomOf="@+id/reditTextContrasena" />
+
+
+        <EditText
+            android:id="@+id/reditTextdireccion"
+            android:layout_width="320dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints=""
+            android:background="@drawable/custominputtienda"
+            android:drawableStart="@drawable/ic_direccion"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="@string/direccion_de_la_tienda_negocio"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/reditTextNombret"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/reditTextNombret"
+            app:layout_constraintTop_toBottomOf="@+id/reditTextNombret" />
+
+        <EditText
+            android:id="@+id/reditTexttelefono"
+            android:layout_width="320dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints=""
+            android:background="@drawable/custominputtienda"
+            android:drawableStart="@drawable/ic_llamada"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="@string/telefono"
+            android:inputType="phone"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/reditTextdireccion"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/reditTextdireccion"
+            app:layout_constraintTop_toBottomOf="@+id/reditTextdireccion" />
+
+
+        <Button
+            android:id="@+id/rbuttonRegistrarse"
+            android:layout_width="210dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/gradient_background_button"
+            android:fontFamily="@font/comfortaabold"
+            android:text="@string/registrarse"
+            android:textAllCaps="false"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/reditTexttelefono"
+            app:layout_constraintStart_toStartOf="@+id/reditTexttelefono"
+            app:layout_constraintTop_toBottomOf="@+id/reditTexttelefono"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
