@@ -7,9 +7,20 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.MenuItem;
 
+import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.inventoryapp.Constants;
 import com.example.inventoryapp.Fragments.menuprincipalFragment;
 import com.example.inventoryapp.Fragments.ProveedoresFragment;
 import com.example.inventoryapp.Fragments.CategoriasProductosFragment;
@@ -23,6 +34,9 @@ import com.example.inventoryapp.Fragments.contactanosFragment;
 import com.example.inventoryapp.R;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
@@ -34,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        drawerLayout =  findViewById(R.id.drawer_layout);
+        navigationView =  findViewById(R.id.navigation_view);
 
 
         setToolbar();
@@ -93,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new acercadeFragment();
                         fragmentsTransaccion = true;
                         break;
+                    case R.id.cerrarsesion:
+                        cerrarSesion();
+                        break;
                 }
 
                 // Renderizar
@@ -126,14 +143,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void setToolbar(){
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.icon_home);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
-
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -170,5 +186,53 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    private void cerrarSesion(){
+
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.SHARED_PREFS, MODE_PRIVATE);
+        int id_usuario = sharedPreferences.getInt(Constants.ID_USUARIO,-1);
+
+        String url_cerrar_sesion = Constants.BASE_URL+"cerrar_sesion.php" ;
+
+        if(id_usuario == -1){
+            Toast.makeText(MainActivity.this, "Error al cerrar sesion", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url_cerrar_sesion, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.apply();
+
+                Toast.makeText(MainActivity.this, "Cierre de sesión exitoso",
+                        Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, StartActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        },
+        new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MainActivity.this, "Error al cerrar sesion: "+ error.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        }
+        ) {
+            @Override
+
+            protected Map<String,String> getParams() throws AuthFailureError {
+
+                Map<String,String> params = new HashMap<>();
+
+                params.put("id_usuario",String.valueOf(id_usuario));
+                return params;
+
+            }
+        };
+        Volley.newRequestQueue(this).add(stringRequest);
+    }
 
 }

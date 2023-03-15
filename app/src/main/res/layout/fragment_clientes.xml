@@ -32,6 +32,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
@@ -45,6 +46,37 @@
             app:layout_constraintTop_toBottomOf="@+id/CAgregarRegistro">
 
         </TextView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/CAgregarRegistro"
+            app:layout_constraintStart_toStartOf="@+id/CAgregarRegistro"
+            app:layout_constraintTop_toBottomOf="@+id/CAgregarRegistro">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </ScrollView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,7 @@
 package com.example.inventoryapp.Activities;
 
+import com.example.inventoryapp.Constants;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -18,6 +20,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+
 import com.example.inventoryapp.R;
 import com.example.inventoryapp.VolleySingleton;
 
@@ -30,7 +33,7 @@ import java.util.Map;
 
 public class RegistrarseActivity extends AppCompatActivity {
 
-    String url_registrar = "https://inventoryappweb.000webhostapp.com/usuario_insertar.php";
+    String url_registrar = Constants.BASE_URL+"usuario_insertar.php";
 
     private Button btnRegistrarse;
     private EditText editTextnombreusuario, editTextemailusuario, editTextcontrasena,
@@ -66,7 +69,6 @@ public class RegistrarseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registrarUsuario();
-                finish();
             }
         });
 
@@ -132,7 +134,7 @@ public class RegistrarseActivity extends AppCompatActivity {
             return;
         }
 
-        String regex = "\\d{10}" ;
+        String regex = "\\d{9}" ;
 
         if(telefono.matches(regex)){
             editTexttelefonotienda.setError("Debe tener al menos 10 digitos numericos");
