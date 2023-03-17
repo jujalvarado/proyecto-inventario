@@ -12,6 +12,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.view.MenuItem;
+import android.view.TextureView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout =  findViewById(R.id.drawer_layout);
         navigationView =  findViewById(R.id.navigation_view);
+
+
+
 
 
         setToolbar();

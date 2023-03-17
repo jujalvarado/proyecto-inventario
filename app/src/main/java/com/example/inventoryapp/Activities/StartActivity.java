@@ -20,7 +20,7 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_start);
         SharedPreferences sharedPreferences = getSharedPreferences(Constants.SHARED_PREFS, MODE_PRIVATE);
         int user_id = sharedPreferences.getInt(Constants.ID_USUARIO,-1);
 
@@ -28,8 +28,6 @@ public class StartActivity extends AppCompatActivity {
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
             finish();
-        }else{
-            setContentView(R.layout.activity_start);
         }
 
 

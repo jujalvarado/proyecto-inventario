@@ -1,7 +1,12 @@
 package com.example.inventoryapp.Fragments;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import android.content.SharedPreferences;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -9,7 +14,9 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.inventoryapp.Constants;
 import com.example.inventoryapp.Fragments.menuprincipalFragment;
 import com.example.inventoryapp.Fragments.ProveedoresFragment;
 import com.example.inventoryapp.Fragments.CategoriasProductosFragment;
@@ -33,6 +40,8 @@ public class menuprincipalFragment extends Fragment {
     private CardView cardViewProveedores,cardViewCategorias,cardViewProductos,
                      cardViewClientes, cardViewProductoEntrante, cardViewProductoSaliente;
 
+    private TextView textView;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -41,6 +50,7 @@ public class menuprincipalFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     public menuprincipalFragment() {
         // Required empty public constructor
@@ -87,6 +97,15 @@ public class menuprincipalFragment extends Fragment {
         cardViewProductoEntrante = view.findViewById(R.id.cardViewProductoEntrante);
         cardViewProductoSaliente = view.findViewById(R.id.cardViewProductoSaliente);
 
+
+        textView = view.findViewById(R.id.mbienvenida);
+
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences(Constants.SHARED_PREFS, MODE_PRIVATE);
+        String nombre_usuario = sharedPreferences.getString(Constants.NOMBRE_USUARIO,"") ;
+        String nombre_tienda = sharedPreferences.getString (Constants.NOMBRE_TIENDA,"");
+
+        textView.setText("Bienvenido de vuelta "+nombre_usuario+" a tu tienda '"+nombre_tienda+"'");
 
         cardViewProveedores.setOnClickListener(new View.OnClickListener() {
             @Override

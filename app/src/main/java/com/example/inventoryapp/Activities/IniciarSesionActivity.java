@@ -124,6 +124,7 @@ public class IniciarSesionActivity extends AppCompatActivity {
                             editor.putInt(Constants.ID_USUARIO,object.getInt("id_usuario"));
                             editor.putInt(Constants.ID_TIENDA,object.getInt("id_tienda"));
                             editor.putString(Constants.NOMBRE_TIENDA, object.getString("nombre_tienda"));
+                            editor.putString(Constants.NOMBRE_USUARIO, object.getString("nombre_usuario"));
                             editor.apply();
 
                         }

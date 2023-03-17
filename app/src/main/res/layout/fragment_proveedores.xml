@@ -33,6 +33,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/tv_no_proveedores"
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
@@ -46,6 +48,16 @@
             app:layout_constraintTop_toBottomOf="@+id/ProAgregarRegistro">
 
         </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerProveedores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            app:layout_constraintEnd_toEndOf="@+id/ProAgregarRegistro"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="@+id/ProAgregarRegistro"
+            app:layout_constraintTop_toBottomOf="@+id/ProAgregarRegistro" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
