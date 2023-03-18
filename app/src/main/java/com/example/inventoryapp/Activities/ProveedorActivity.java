@@ -112,7 +112,7 @@ public class ProveedorActivity extends AppCompatActivity {
 
             title.setText("Editar Proveedor");
             btnseditarproveedor();
-            cargarproveedor(idProveedorEditar);
+            cargarproveedor();
 
         }else{
             title.setText("Agregar Proveedor");
@@ -160,7 +160,7 @@ public class ProveedorActivity extends AppCompatActivity {
 
 
 
-    private void cargarproveedor(int idProveedorEditar){
+    private void cargarproveedor(){
 
         btnseditarproveedor();
 
@@ -201,7 +201,7 @@ public class ProveedorActivity extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences(Constants.SHARED_PREFS, MODE_PRIVATE);
                 int id_proveedor= sharedPreferences.getInt(Constants.ID_PROVEEDOR,-1);
                 HashMap<String, String> params = new HashMap();
-                params.put("id_proveedor",String.valueOf(id_proveedor));
+                params.put("id_proveedor",String.valueOf(idProveedorEditar));
                 return params;
             }
 
@@ -362,7 +362,7 @@ public class ProveedorActivity extends AppCompatActivity {
     }
 
     private void cancelaract(){
-        cargarproveedor(idProveedorEditar);
+        cargarproveedor();
         btnseditarproveedor();
     }
 
