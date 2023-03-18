@@ -4,6 +4,7 @@ public class Constants {
     public static final String SHARED_PREFS = "my_shared_prefs";
     public static final String ID_USUARIO = "id_usuario";
     public static final String ID_TIENDA = "id_tienda";
+    public static final String ID_PROVEEDOR = "id_proveedor";
     public static final String NOMBRE_TIENDA = "nombre_tienda";
     public static final String NOMBRE_USUARIO = "nombre_usuario";
     public static final String SESION_ACTIVA = "sesion_activa";

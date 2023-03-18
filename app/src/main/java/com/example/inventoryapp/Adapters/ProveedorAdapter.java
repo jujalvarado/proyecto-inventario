@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.inventoryapp.Activities.ProveedorActivity;
 import com.example.inventoryapp.Models.Proveedor;
 import com.example.inventoryapp.R;
 
@@ -49,6 +50,7 @@ public class ProveedorAdapter  extends RecyclerView.Adapter<ProveedorAdapter.Pro
                 Intent intent = new Intent(mContext, ProveedorActivity.class);
                 intent.putExtra("id_proveedor",proveedor.getId());
                 mContext.startActivity(intent);
+                actualizarDatos(mProveedorList);
             }
         });
 

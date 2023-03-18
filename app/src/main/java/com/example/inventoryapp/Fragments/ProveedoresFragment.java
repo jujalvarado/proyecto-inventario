@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -117,6 +118,7 @@ public class ProveedoresFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ProveedorActivity.class);
                 startActivity(intent);
+                cargarProveedores();
             }
         });
 
@@ -140,6 +142,8 @@ public class ProveedoresFragment extends Fragment {
                             }else{
                                 recyclerViewProveedores.setVisibility(View.VISIBLE);
                                 tvProveedores.setVisibility(View.GONE);
+
+                                proveedorList.clear();
 
                                 for (int i = 0; i < jsonArray.length(); i++){
 
@@ -187,4 +191,13 @@ public class ProveedoresFragment extends Fragment {
         VolleySingleton.getInstance(getActivity()).addToRequestQueue(stringRequest);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove(Constants.ID_PROVEEDOR);
+        editor.apply();
+        cargarProveedores();
+    }
 }
